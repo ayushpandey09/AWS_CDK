@@ -3,7 +3,7 @@ import os
 import uuid
 import boto3
 
-task_table_name = "AwsPracStack-TaskTableDynamoDbF1E54A09-INM3AHHB142V"
+task_table_name = os.environ['TASK_TABLE_NAME']
 
 dynamodb = boto3.resource('dynamodb')
 table = dynamodb.Table(task_table_name)
